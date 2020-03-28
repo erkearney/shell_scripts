@@ -1,0 +1,5 @@
+#!/bin/sh
+# Create a file full of randomized text with n (default 10) lines
+lines=10
+[ "$1" ] && lines=$1
+base64 /dev/urandom | head -c $((lines*76)) > junk_text
