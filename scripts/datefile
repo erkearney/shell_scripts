@@ -1,0 +1,5 @@
+#!/bin/bash
+# Create a file and append a timestamp to the file's name
+filename=file
+[ "$1" ] && filename=$1
+touch ${filename}_`date +"%F_%H:%m:%S"`
