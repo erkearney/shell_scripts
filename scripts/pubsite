@@ -1,0 +1,7 @@
+#!/bin/bash
+git add *
+read -r -p "Enter github commit message: " MESSAGE
+git commit -m "$MESSAGE"
+git push
+read -r -p "Enter username" USERNAME
+rsync -rvz --update $HOME/Documents/Website/aeryck/ $USERNAME@$AERYCKIP:/var/www/aeryck
